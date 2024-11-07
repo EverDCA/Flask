@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section id="contacto" class="container mt-1 fs-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <p class="text-center">¿Tienes alguna pregunta o deseas hacer un pedido especial? ¡Escríbenos! Estamos aquí para ayudarte.</p>
+        
+        <form action="/enviar-mensaje" method="POST" class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono">
+            </div>
+            
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+        </form>
+    
+        <div class="text-center mt-4">
+            <p><strong>Teléfono:</strong> +57 340012890</p>
+            <p><strong>Correo:</strong> contacto@pancomido.com</p>
+            <p><strong>Dirección:</strong> Calle 25a #13a-46 Los Alpes, Ciudad de Sincelejo, Sucre/Colombia</p>
+        </div>
+    </section>
+    
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="text-center mt-5">Estos son nuestros Panes mas populares!</h2>
+    <div class="d-flex flex-row gap-5 justify-content-center mt-5 mb-5 ">
+        <div class="card" style="width: 16rem;">
+            <img src="static/img/panDulce.jpg" class="card-img-top" alt="..." style="height: 200px; img-fluid">
+            <div class="card-body">
+              <p class="card-text fs-5">Pan Dulce: Este pan suave y esponjoso es ligeramente azucarado, ideal para disfrutar como un dulce aperitivo o postre. A menudo está decorado con azúcar glas o un glaseado, lo que le da un toque dulce extra.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <img src="static/img/panBocadillo.jpg" class="card-img-top" alt="..."style="height: 200px; img-fluid">
+            <div class="card-body">
+              <p class="card-text fs-5">Pan de Bocadillo: Un pan tradicional relleno con bocadillo de guayaba (dulce de guayaba), que combina la suavidad del pan con el sabor frutal y ligeramente ácido del bocadillo. Es perfecto para quienes buscan un sabor auténtico y delicioso.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <img src="static/img/quaso.png" class="card-img-top" alt="..." style="height: 200px">
+            <div class="card-body">
+              <p class="card-text fs-5">Croissant: Un pan de origen francés, famoso por su forma de media luna y sus capas ligeras y crujientes. Elaborado con mucha mantequilla, este pan es suave y se deshace en la boca, ideal para acompañar con café o té.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <img src="static/img/panMantequilla.png" class="card-img-top" alt="..." style=" height: 200px">
+            <div class="card-body">
+              <p class="card-text fs-5">Pan de Mantequilla: Este pan esponjoso y suave está hecho con mantequilla, lo que le da un sabor rico y una textura delicada. Es perfecto para acompañar el desayuno o como un bocadillo a cualquier hora del día.</p>
+            </div>
+          </div>
+    </div>
+
+{% endblock %}
