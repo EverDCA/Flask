@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{%block content%}
+<h1>Calculadora De Divisa</h1>
+
+<form action="/divisa" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">USD a COP</label>
+      <input type="number" class="form-control"  name="n1" placeholder="Ingresa la cantidad de USD">
+    </div>
+    <button type="submit" class="btn btn-success">Calcular</button>
+  </form>
+<div>
+  {{ inserte | safe }}
+</div>
+{% endblock %}

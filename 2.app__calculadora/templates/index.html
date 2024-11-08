@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{%block content%}
+<h1>Calculadora Aritmetica</h1>
+
+<form action="/" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Numero 1</label>
+      <input type="number" class="form-control"  name="n1" placeholder="Ingresa el primer numero">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Numero 2</label>
+      <input type="number" class="form-control" name="n2" placeholder="Ingresa el segundo numero">
+    </div>
+    <button type="submit" class="btn btn-success">Calcular</button>
+  </form>
+<div>
+  {{ inserte | safe }}
+</div>
+{% endblock %}
