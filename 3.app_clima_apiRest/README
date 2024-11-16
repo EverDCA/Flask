@@ -1,0 +1,47 @@
+# PASOS PARA CREAR UN PROYECTO( APP WEB CLIMA ) EN PYTHON FLASK CON API REST OpenWeather
+API REST: https://openweathermap.org/
+API KEY: cc4552b5d77473ae40bc4cc76bbc1fd9
+url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=es'
+
+<img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="{{ weather.description }}" class="img-fluid" style="max-width: 100px;">
+#####################################################################################################
+
+PARA HACER DEPLOY A NUESTRA APP al FINAL:
+PythonAnywhere: https://www.pythonanywhere.com/
+############################################################################
+ 
+# USANDO UN ENTORNO VIRTUAL E INSTALACION SUS DEPENDENCIAS(PAQUETES)
+
+# PASO 1, Crear mi entorno virtual
+
+python3 -m venv env
+
+ó
+
+python -m venv env
+
+#PASO 2, Activar el entorno virtual ejecutando
+
+. env/Scripts/activate
+
+#PASO 3, Ya dentro del entorno virtual instalar flask y todas sus dependencias
+
+pip install Flask 
+pip install requests
+
+#PASO 4, Crear/Actualizar el fichero requirements.txt:
+
+pip freeze > requirements.txt
+
+#PASO 5, para correr el proyecto solo debes ejecutar el archivo
+# esto se realiza cuando voy a instalar en otra carpeta o dispositivo
+
+pip install -r requirements.txt
+
+#PASO 6, Para desactivar nuestro entono virtual
+
+deactivate
+
+#comando para actualiza pip ( opcional )
+
+python -m pip install --upgrade pip

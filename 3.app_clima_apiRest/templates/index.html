@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Web Clima</title>
+    <!-- Enlace al CSS de Bootstrap 5.3 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg">
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4 fscolor">Consulta del Clima</h1>
+            <p class="lead text-white">Introduce una o varias ciudades separadas por comas para consultar el clima.</p>
+        </div>
+        <form method="POST" class="mb-4">
+            <div class="row">
+                <div class="col-8 offset-md-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ejemplo: Madrid, Bogotá, Nueva York" required>
+                        <button type="submit" class="btn btn-primary ">Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% if weather_data %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for weather in weather_data %}
+            <div class="col">
+                <div class="card rounded-4 shadow-md bgcard text-dark">
+                    <div class="card-body text-center lead">
+                        {% if weather.error %}
+                        <p class="text-danger fscs"><strong>{{ weather.city }}:</strong> {{ weather.error }}</p>
+                        {% else %}
+                        <h6 class="card-title fscs">{{ weather.city }}</h6>
+                        <h3 class="display-4 mb-0 fscs">{{ weather.temperature }}°C</h3>
+                        <p class="card-text small fscs">Sensación: {{ weather.feels_like }}°C</p>
+                        <p class="card-text small fscs">Min: {{ weather.temp_min }}°C, Max: {{ weather.temp_max }}°C</p>
+                        <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="{{ weather.description }}" class="img-fluid" style="max-width: 100px;">
+                        <p class="card-text fscs">{{ weather.description | capitalize }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <!-- Enlace al JS de Bootstrap 5.3 y sus dependencias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
