@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %} Juegos {% endblock %}
+{% block contenido %}
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col ">
+            <h3 class="h3 text-light mb-5 text-center">Juegos</h3>
+            <a href="{{ url_for('formulario_agregar_juego') }}" class="btn-grad"><i class="bi bi-plus-square fs-5 "></i></a>
+            <div class="table-responsive bgtrasp ">
+                <table class="table text-light" >
+                    <thead>
+                        <tr>
+                            <th class="">Nombre</th>
+                            <th class="">Categoria</th>
+                            <th class="">Precio</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for juego in juegos %}
+                        <tr>
+                            <td>{{ juego[1] }}</td>
+                            <td>{{ juego[2] }}</td>
+                            <td>{{ juego[3] }}</td>
+                            <td class="w-25">
+                                <div class="d-flex gap-1">
+                                    <!-- Detalles -->
+                                    <a href="{{ url_for('detalles', id=juego[0]) }}" class="btn-grad4"><i class="bi bi-eye-fill"></i></a>
+                                    <!-- EditarJuego -->
+                                    <a href="{{ url_for('editar_juego', id=juego[0]) }}" class="btn-grad3"><i class="bi bi-pencil-square"></i></a>
+                                    <!-- Eliminar -->
+                                    <form id="eliminar-juego-{{ juego[0] }}" action="{{ url_for('eliminar_juego') }}" method="POST" style="display: none;">
+                                        <input type="hidden" name="id" value="{{ juego[0] }}">
+                                    </form>
+                                    <a href="#" class="btn-grad2" onclick="document.getElementById('eliminar-juego-{{ juego[0] }}').submit(); return false;">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </a>
+                                </div>
+                                
+
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

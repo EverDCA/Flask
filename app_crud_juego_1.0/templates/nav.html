@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navb" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img alt="Logo" src="{{url_for('static',filename='img/logo.png')}}" style="max-height: 100px;">
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url_for('juegos') }}"> <h2 class="text-center text-light">ShadowGames</h2> </a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="#" class="btn-grad5">
+                    <strong><i class="bi bi-info-circle"></i></strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
