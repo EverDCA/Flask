@@ -1,0 +1,243 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > :not(footer) {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+
+.bgcolor {
+  background: #26073a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #053937,
+    #190327
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #280a3d,
+    #3d0a25
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #1a162a 0%,
+    #4a3a73 51%,
+    #1a162a 100%
+  );
+  padding: 3px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.7s;
+  background-size: 200% auto;
+  color: #dfd2ff;
+  font-weight:bold;
+  border-radius: 10px;
+  text-decoration: none;
+  width:auto;
+  flex-grow: 1;
+  border: #1a162a4c 4px solid;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #f7f4ff;
+  text-decoration: none;
+}
+
+.navb {
+  background-color: #000000a5;
+  object-fit: contain;
+}
+
+.btn-grad2 {
+  background-image: linear-gradient(
+    to right,
+    #fe8c00 0%,
+    #f83600 51%,
+    #fe8c00 100%
+  );
+  padding: 2px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.8s;
+  background-size: 200% auto;
+  color: rgb(93, 42, 0);
+  font-weight: bolder;
+  border-radius: 10px;
+  display: table-caption;
+  text-decoration: none;
+  flex-grow: 1;
+  width: auto;
+  border: #16222a5e 4px solid;
+}
+
+.btn-grad2:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(40, 17, 0);
+  text-decoration: none;
+}
+
+
+
+
+
+.btn-grad3 {
+  background-image: linear-gradient(to right, #56ab2f 0%, #a8e063  51%, #56ab2f  100%);
+  text-align: center;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #004910;
+  font-weight: bolder;
+  border-radius: 10px;
+  text-decoration: none;
+  border: #172a162d 4px solid;
+  display: table-caption;
+  flex-grow: 1;
+  width:auto;
+ }
+
+ .btn-grad3:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #001705;
+   text-decoration: none;
+   
+ }
+
+ .btn-grad4 {
+  background-image: linear-gradient(to right,#004777 0%,#469bc6 51%,#004777 100%);
+  text-align: center;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #001424;
+  font-weight: bolder;
+  border-radius: 10px;
+  text-decoration: none;
+  border: #172a162d 4px solid;
+  display: table-caption;
+  width:auto;
+  flex-grow: 1;
+ 
+ }
+
+ .btn-grad4:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #000917;
+   text-decoration: none;
+   
+ }
+ .btn-grad5 {
+  background-image: linear-gradient(to right,#1a162a 0%,
+  #4a3a73 51%,
+  #1a162a 100%);
+  margin-right: 30px;
+  text-align: center;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #9777e8;
+  border-radius: 10px;
+  text-decoration: none;
+  border: #1a162a53 4px solid;
+  display: table-caption;
+
+
+ 
+ }
+
+ .btn-grad5:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #ffffff;
+   text-decoration: none;
+   
+ }
+
+.bgtrasp{
+  background-color: rgba(0, 0, 0, 0.283);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 8px 10px;
+  box-shadow: 3px 5px 10px #000000a5;
+  object-fit: cover;
+}
+
+.bgtrasp1{
+  background-color: rgba(0, 0, 0, 0.283);
+  border-radius: 10px;
+  margin-top: 0px;
+  padding:10px 50px;
+  box-shadow: 3px 5px 12px #000000a5;
+}
+.st{
+  font-style: none;
+}
+
+/* modo oscuro y claro */
+/* Tema claro (por defecto) */
+body.light-mode {
+  background: #26073a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #756280,
+    #784962
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #692599,
+    #8a3b67
+  ); 
+}
+
+/* Tema oscuro */
+body.dark-mode {
+  background: #26073a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #053937,
+    #190327
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #280a3d,
+    #3d0a25
+  ); 
+}
+
+/* Estilo del botón */
+button#theme-toggle {
+  background-image: linear-gradient(
+    to right,
+    #1a162a 0%,
+    #4a3a73 51%,
+    #1a162a 100%
+  );
+  margin-top: 10px;
+  padding: 3px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.7s;
+  background-size: 200% auto;
+  color: #c6ecff;
+  font-weight:bold;
+  border-radius: 10px;
+  text-decoration: none;
+  width:auto;
+  flex-grow: 1;
+  border: #1a162a4c 4px solid;
+}
+button#theme-toggle:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #eaf8ff;
+  text-decoration: none;
+}

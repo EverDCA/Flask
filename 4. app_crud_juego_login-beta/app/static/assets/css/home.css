@@ -1,0 +1,112 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #F4F4F4 !important;
+}
+
+.form-label {
+    margin-bottom: 0px !important;
+}
+
+.btn-send {
+    border-radius: 25px;
+    background-color: #f1b32c;
+    border: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.btn-send:hover {
+    background-color: #f1b32c;
+    color: #333 !important;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#title {
+    text-align: center;
+    margin-top: -80px;
+    font-weight: 600;
+}
+.text-darkblue{
+    color: #004171;
+}
+
+#link_forgot_password {
+    color: #004171;
+    padding: 0px 15px
+}
+
+#link_sign_up {
+    color: #004171;
+}
+
+#link_sign_up:hover {
+    color: #f12c98;
+    font-weight: 500;
+}
+
+#link_forgot_password:hover {
+    color: #f1b32c;
+    font-weight: 500;
+}
+
+#styleLogin {
+    color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.283);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px 30px;
+  box-shadow: 3px 5px 10px #000000a5;
+  min-width: 20vw;
+}
+
+#styleLogin1 {
+    color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.283);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px 20px;
+  box-shadow: 3px 5px 10px #000000a5;
+  min-width: 60vw;
+}
+
+.bi-arrow-left-short {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333;
+}
+
+#here{
+    color: #004171;
+}
+#here:hover{
+    color: #f1b32c !important;
+}
+.styFormDashboard{
+    background: #f9f9f9;
+    padding: 30px 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.logoLogin{
+    height:100px; 
+    width:120px;
+    border-radius:50%;
+    position: relative;
+    top: -80px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    #styleLogin{
+        margin: 0 auto;
+        width: 35% !important;
+    }
+}
+@media (min-width: 280px) and (max-width: 680px) {
+    #styleLogin{
+        margin: 0 auto;
+        width: 80% !important;
+    }
+}

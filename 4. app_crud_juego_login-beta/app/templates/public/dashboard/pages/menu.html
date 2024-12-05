@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navb">
+  <div class="container-fluid">
+    <!-- Logo alineado a la izquierda -->
+    <a class="navbar-brand" href="./">
+      <img 
+        alt="Logo" 
+        src="{{url_for('static', filename='assets/imgs/logo.png')}}" 
+        style="max-height: 80px;">
+    </a>
+    <!-- Botón menú hamburguesa -->
+    <button 
+      class="navbar-toggler bg-light" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <!-- Contenido del navbar -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Opción Juegos centrada -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('inicio') }}">
+            <i class="bi bi-controller text-white"></i> ShadowGames
+          </a>
+        </li>
+      </ul>
+      
+      <!-- Opciones alineadas a la derecha -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Imagen de perfil con menú desplegable -->
+        <div class=""><button id="theme-toggle"></button></div>
+        <li class="nav-item dropdown text-light">
+          
+          
+          <a 
+            class="nav-link dropdown-toggle d-flex align-items-center text-white" 
+            href="#" 
+            id="navbarDropdown" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+            
+            <img 
+              src="{{url_for('static', filename='assets/imgs/perfil.png')}}" 
+              alt="Perfil" 
+              class="rounded-circle" 
+              style="width: 40px; height: 40px; object-fit: cover; margin-right: 8px;">
+            {{ dataLogin.nombre }}
+            
+          </a>
+          
+          <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="bi bi-person"></i> Ver Perfil
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ url_for('editProfile') }}">
+                <i class="bi bi-pencil"></i> Editar Perfil
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ url_for('logout') }}">
+                <i class="bi bi-box-arrow-right"></i> Salir
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
